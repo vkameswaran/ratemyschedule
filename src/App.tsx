@@ -34,13 +34,16 @@ function App() {
     const getDifficultyString = async (course: string): Promise<CourseInfo> => {
         const url: string = `https://c4citk6s9k.execute-api.us-east-1.amazonaws.com/prod/data/course?courseID=${course.replace(" ", "%20")}`;
         const responseData: CourseInfoResponseData = await fetch(url).then(response => response.json());
+        if (responseData.header.length === 0) {
+            return {id: course, text: `Error: No data available for ${course}.`};
+        }
         const averageA = mean(responseData.raw.map(r => r.A));
         if (responseData.header[0].full_name) {
             if (averageA < 30) return {id: course, text: `${course} is a difficult class.`};
             else if (averageA < 50) return {id: course, text: `${course} is a moderate class.`};
             else return {id: course, text: `${course} is an easy class.`};
         } else {
-            return {id: course, text: `$Error: No data available for {course}.`};
+            return {id: course, text: `Error: No data available for ${course}.`};
         }
     }
 
