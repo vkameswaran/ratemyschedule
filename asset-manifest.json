@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ratemyschedule/static/css/main.31d6cfe0.css",
-    "main.js": "/ratemyschedule/static/js/main.6b42379c.js",
+    "main.js": "/ratemyschedule/static/js/main.bda435a3.js",
     "static/js/787.e29362a9.chunk.js": "/ratemyschedule/static/js/787.e29362a9.chunk.js",
     "index.html": "/ratemyschedule/index.html",
-    "main.6b42379c.js.map": "/ratemyschedule/static/js/main.6b42379c.js.map",
+    "main.bda435a3.js.map": "/ratemyschedule/static/js/main.bda435a3.js.map",
     "787.e29362a9.chunk.js.map": "/ratemyschedule/static/js/787.e29362a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.6b42379c.js"
+    "static/js/main.bda435a3.js"
   ]
 }
